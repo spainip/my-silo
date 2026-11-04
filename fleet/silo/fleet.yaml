@@ -1,0 +1,10 @@
+defaultNamespace: silo
+
+helm:
+  repo: https://spainip.github.io/my-silo/
+  chart: silo
+  version: 7.0.4
+  releaseName: silo
+  takeOwnership: true
+  valuesFiles:
+    - values.yaml

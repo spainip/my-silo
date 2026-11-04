@@ -1,0 +1,18 @@
+# Registration descriptor for spainip/infra/fleet. Keep this manifest out of
+# fleet/silo so it does not recursively register itself as part of its bundle.
+apiVersion: fleet.cattle.io/v1alpha1
+kind: GitRepo
+metadata:
+  name: my-silo
+  namespace: spainip
+  labels:
+    fleet.spainip.es/workspace: spainip
+spec:
+  repo: https://github.com/spainip/my-silo.git
+  branch: main
+  clientSecretName: github-auth
+  paths:
+    - fleet/silo
+  keepResources: true
+  correctDrift:
+    enabled: true

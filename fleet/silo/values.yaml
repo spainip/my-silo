@@ -1,0 +1,11 @@
+# These Fleet overrides configure the service endpoints. The full chart defaults
+# and other supported settings are documented in charts/silo/values.yaml.
+existingSecret: silo-root-credentials
+
+ingress:
+  hosts:
+    - silo-api.spainip.es
+
+consoleIngress:
+  hosts:
+    - silo.spainip.es
