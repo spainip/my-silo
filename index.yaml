@@ -1,2 +1,29 @@
 apiVersion: v1
-entries: {}
+entries:
+  silo:
+  - annotations:
+      spainip.es/upstream-chart-version: 7.0.3
+      spainip.es/upstream-commit: 69fcf50cd2e0854af0150413df5fd66a5d74becc
+    apiVersion: v1
+    appVersion: RELEASE.2026-10-26T00-00-00Z
+    created: "2026-11-04T12:55:34.470311331Z"
+    description: S3-Interface Libre Object Storage
+    digest: 7591e749c7e783679a132c90fc8fbe7ed2aec2f5a0dfc1abc78c9ffd77639905
+    home: https://silo.pgsty.com/
+    icon: https://silo.pgsty.com/img/silo.svg
+    keywords:
+    - silo
+    - storage
+    - object-storage
+    - s3
+    - cluster
+    maintainers:
+    - name: Pigsty
+      url: https://pigsty.io
+    name: silo
+    sources:
+    - https://github.com/pgsty/silo
+    urls:
+    - silo-7.0.4.tgz
+    version: 7.0.4
+generated: "2026-11-04T12:55:34.470315146Z"
