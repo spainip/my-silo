@@ -9,3 +9,9 @@ ingress:
 consoleIngress:
   hosts:
     - silo.spainip.es
+
+# Keep the Console's Prometheus queries on the cluster network. The scrape
+# definition uses the job label configured below.
+environment:
+  MINIO_PROMETHEUS_URL: http://kube-prometheus-stack-prometheus.cattle-monitoring-system.svc.cluster.local:9090
+  MINIO_PROMETHEUS_JOB_ID: minio-job
