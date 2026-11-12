@@ -1,0 +1,21 @@
+apiVersion: monitoring.coreos.com/v1alpha1
+kind: ScrapeConfig
+metadata:
+  name: silo
+  namespace: cattle-monitoring-system
+  labels:
+    release: kube-prometheus-stack
+spec:
+  jobName: minio-job
+  scrapeInterval: 60s
+  scrapeTimeout: 10s
+  metricsPath: /minio/metrics/v3
+  scheme: http
+  authorization:
+    type: Bearer
+    credentials:
+      name: silo-prometheus-scrape
+      key: token
+  staticConfigs:
+    - targets:
+        - silo.silo.svc.cluster.local:9000

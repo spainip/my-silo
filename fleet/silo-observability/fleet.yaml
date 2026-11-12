@@ -1,0 +1,8 @@
+# Silo's own Prometheus scrape configuration. Moved out of the infra repository
+# on 2026-11-12: it describes Silo's metrics endpoint and references the
+# silo-prometheus-scrape credential, which this application owns. The upstream
+# chart is an external repository, so this runs as its own kustomize bundle
+# rather than being folded into fleet/silo.
+defaultNamespace: cattle-monitoring-system
+kustomize:
+  dir: .
